@@ -1,0 +1,253 @@
+{
+  "generator-cedrus-api": {
+    "haveConfigFile": true,
+    "discover": {
+      "ask": false,
+      "apiConsumes": [
+        "application/json"
+      ],
+      "apiProduces": [
+        "application/json"
+      ]
+    },
+    "detail": {
+      "ask": false,
+      "isPublic": true,
+      "httpMethods": [
+        "get",
+        "put",
+        "post",
+        "patch",
+        "delete"
+      ],
+      "httpStatusCodes": [
+        "204",
+        "404",
+        "500"
+      ],
+      "versioning": {
+        "enabled": true,
+        "type": "uri",
+        "versionNumber": [
+          "v1"
+        ],
+        "uriOrder": "versionNumberFirst",
+        "contentTypeOrder": "versionNumberFirst",
+        "customHeaderName": "versionNumberFirst"
+      },
+      "apiData": {
+        "returnDataType": "Test Data"
+      },
+      "records": {
+        "limit": "10"
+      },
+      "cache": {
+        "RedisEnable": false,
+        "RedisHost": "pub-redis-19334.dal-05.1.sl.garantiadata.com",
+        "RedisPort": "19334",
+        "RedisPassword": "zKvyYzznhsdvYwgq",
+        "RedisExpire": 180
+      },
+      "pagination": {
+        "PaginationEnable": true
+      },
+      "filter": {
+        "FilterEnable": false
+      }
+    },
+    "deploy": {
+      "ask": false,
+      "apiApplicationType": "nodejs",
+      "openWhisk": {
+        "OpenWhiskEnable": false
+      },
+      "tls": {
+        "TLSEnable": false
+      },
+      "cloudFoundry": {
+        "appName": "app 1",
+        "appMemory": "256M"
+      }
+    },
+    "apiOverview": {
+      "apiName": "clientv7",
+      "apiBasePath": "/api",
+      "apiDescription": "this is client v7"
+    },
+    "dataInput": {
+      "dataInputType": "JSON Input"
+    },
+    "JSONExtraction": [
+      {
+        "resourceName": "client",
+        "jsonFilePath": "{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\"},\"firstName\":{\"type\":\"string\"},\"lastName\":{\"type\":\"string\"},\"age\":{\"type\":\"number\"},\"address\":{\"type\":\"object\",\"properties\":{\"streetAddress\":{\"type\":\"string\"},\"city\":{\"type\":\"string\"},\"state\":{\"type\":\"string\"},\"postalCode\":{\"type\":\"string\"}},\"required\":[\"streetAddress\",\"city\",\"state\",\"postalCode\"]},\"phoneNumber\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\"},\"number\":{\"type\":\"string\"}},\"required\":[\"type\",\"number\"]}}},\"required\":[\"id\",\"firstName\",\"lastName\",\"age\"]}",
+        "jsonSchema": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "age": {
+              "type": "number"
+            },
+            "address": {
+              "type": "object",
+              "properties": {
+                "streetAddress": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "postalCode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "streetAddress",
+                "city",
+                "state",
+                "postalCode"
+              ]
+            },
+            "phoneNumber": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "number": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "number"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "firstName",
+            "lastName",
+            "age"
+          ]
+        },
+        "isPublic": true,
+        "httpMethods": [
+          "get",
+          "put",
+          "post",
+          "patch",
+          "delete"
+        ],
+        "httpStatusCodes": [
+          "204",
+          "404",
+          "500"
+        ],
+        "requireTestDataType": "Test Data",
+        "apiFakerMappingFileProvided": false,
+        "recordsLimit": "10",
+        "requireQuery": false
+      },
+      {
+        "resourceName": "client",
+        "jsonFilePath": "{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\"},\"firstName\":{\"type\":\"string\"},\"lastName\":{\"type\":\"string\"},\"age\":{\"type\":\"number\"},\"address\":{\"type\":\"object\",\"properties\":{\"streetAddress\":{\"type\":\"string\"},\"city\":{\"type\":\"string\"},\"state\":{\"type\":\"string\"},\"postalCode\":{\"type\":\"string\"}},\"required\":[\"streetAddress\",\"city\",\"state\",\"postalCode\"]},\"phoneNumber\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\"},\"number\":{\"type\":\"string\"}},\"required\":[\"type\",\"number\"]}}},\"required\":[\"id\",\"firstName\",\"lastName\",\"age\"]}",
+        "jsonSchema": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "age": {
+              "type": "number"
+            },
+            "address": {
+              "type": "object",
+              "properties": {
+                "streetAddress": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "postalCode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "streetAddress",
+                "city",
+                "state",
+                "postalCode"
+              ]
+            },
+            "phoneNumber": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "number": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "number"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "firstName",
+            "lastName",
+            "age"
+          ]
+        },
+        "isPublic": true,
+        "httpMethods": [
+          "get",
+          "put",
+          "post",
+          "patch",
+          "delete"
+        ],
+        "httpStatusCodes": [
+          "204",
+          "404",
+          "500"
+        ],
+        "requireTestDataType": "Test Data",
+        "apiFakerMappingFileProvided": false,
+        "recordsLimit": "10",
+        "requireQuery": false
+      }
+    ]
+  }
+}
